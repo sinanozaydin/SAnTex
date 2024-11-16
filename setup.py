@@ -7,9 +7,6 @@ DESCRIPTION = "SAnTeX is a Python library which calculates seismic anisotropy fr
 with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
-# Determine the operating system
-is_windows = platform.system() == "Windows"
-
 # Set up install_requires based on the OS
 install_requires = [
     'joblib',
@@ -22,10 +19,8 @@ install_requires = [
     'scikit-learn',
     'plotly',
     'sphinx_rtd_theme',
+    'orix',
 ]
-
-if not is_windows:
-    install_requires.append('orix')
 
 setup(
     name='santex',
